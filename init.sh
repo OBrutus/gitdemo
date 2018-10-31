@@ -1,4 +1,5 @@
 sudo chmod +777 code.c
+rm a.out
 gcc code.c
 echo "At any time to exit press ctrl+C\nDo you Continue [y/n]"
 read var
