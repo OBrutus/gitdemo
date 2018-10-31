@@ -3,7 +3,7 @@
 int main()
 {
 	int i,j;
-	do
+	while(1)
 	{
 		for(j=0;j<5;j++)
 		{
@@ -11,7 +11,7 @@ int main()
 			printf("%d\t",i);
 		}
 		printf("\n");
-	}while(1);
+	}
 	printf("\n");
 	return 0;
 }
