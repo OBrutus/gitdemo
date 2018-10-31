@@ -2,21 +2,22 @@
 #include<math.h>
 #include <sys/ioctl.h>
 
-int main (void,void)
+int main (void)
 {
-    struct ttysize ts;
-    ioctl(0, TIOCGSIZE, &ts);
+    struct winsize w;
+	int j;
+	char c;
+    ioctl(0, TIOCGWINSZ, &w);
 
-    printf ("lines %d\n", ts.ts_lines);
-    printf ("columns %d\n", ts.ts_cols);
+    printf ("lines %d\n", w.ws_row);
+    printf ("columns %d\n", w.ws_col);
 	scanf("%d",&j);
-	int i,j;
 	while(1)
 	{
-		for(j=0;j<ts.ts_cols;j++)
+		for(j=0;j<w.ws_col;j++)
 		{
-			i=rand()%100;
-			printf("%d\t",i);
+			c=(char)rand()%255;
+			printf("%d\t",c);
 		}
 		printf("\n");
 	}
