@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 #include <sys/ioctl.h>
-
+// Simply generates random number matrix.
 int main (void)
 {
     struct winsize w;
